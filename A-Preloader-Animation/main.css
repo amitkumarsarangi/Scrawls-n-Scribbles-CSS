@@ -1,0 +1,40 @@
+* {margin: 0; padding: 0; border: 0;}
+
+.main-animation {
+	margin: 40vh auto 0 auto;
+	width: 5vw;
+	height: 5vw;
+	border: 2px solid #ffffff;
+	box-shadow: inset 0 0 2vw 0 #000000;
+	animation:changeShapesA 2s infinite;
+	-webkit-animation: changeShapesA 2s infinite;
+}
+	@keyframes changeShapesA {
+		0% {
+			border-radius: 0 50% 50% 50%;
+			background-color: #dddddd;
+		}
+		20% {
+			border-radius: 50% 0 50% 50%;
+			background-color: #cccccc;
+		}
+		50% {
+			border-radius: 50% 50% 0 50%;
+			background-color: #bbbbbb;
+		}
+		75% {
+			border-radius: 50% 50% 50% 0;
+			background-color: #cccccc;
+		}
+		100% {
+			border-radius: 0 50% 50% 50%;
+			background-color: #dddddd;
+		}
+	}
+
+@media (max-width: 700px) {
+	.main-animation {
+		width: 10vw;
+		height: 10vw;
+	}
+}
