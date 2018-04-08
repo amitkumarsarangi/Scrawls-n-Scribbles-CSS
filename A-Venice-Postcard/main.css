@@ -1,0 +1,60 @@
+* {margin: 0; padding: 0; border: 0;}
+/* Reset CSS above... */
+/* Tag selectors below... */
+body {
+	background-color: transparent;
+	font-family: sans-serif;
+}
+/* Non Tag selectors below... */ 
+.container {
+	width: 400px;
+	height: 533px;
+	background: #fff;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 15px #000;
+}
+.container .image {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	transform: translateX(70%);
+	opacity: 0.2;
+	transition: .5s;
+}
+.container .image img {
+	width: 100%;
+}
+.container .text {
+	width: 70%;
+	height: 100%;
+	background: #4d5e6f;
+	padding: 380px 0 0 30px;
+	position: absolute;
+	top: 0;
+	box-sizing: border-box;
+	transform-origin: left;
+	transition: .5s;
+}
+.container .text h1 {
+	margin: 20px 0;
+	color: #ffd;
+	font-weight: 100;
+}
+.container .text h4 {
+	color: #ffd;
+	font-weight: 100;
+	letter-spacing: 2px;
+}
+.container:hover .text {
+	transform: perspective(500px) rotateY(90deg);
+}
+.container:hover .image {
+	transform: translateX(0);
+	opacity: 1;
+}
