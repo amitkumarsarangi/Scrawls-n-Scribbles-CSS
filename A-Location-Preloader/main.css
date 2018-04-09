@@ -1,0 +1,102 @@
+* {margin: 0; padding: 0; border: 0;}
+body {
+	background-color: transparent;
+	font-size: 40px;
+	font-family: verdana;
+}
+.preloader-container {
+	width: 300px;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+	.preloader-icon {
+		font-size: 2em;
+		color: #0000ff;
+		text-shadow: 0 0 1px #0000ff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotateY(55deg);
+		animation: preloader-icon-jump 5.3s infinite 0.3s;
+	}
+		@keyframes preloader-icon-jump {
+			0% {
+				margin: 0 0 0 0;
+			}
+			16% {
+				margin: -20px 0 0 0;
+			}
+			32% {
+				margin: 0 0 0 0;
+			}
+			48% {
+				margin: -20px 0 0 0;
+			}
+			64% {
+				margin: 0 0 0 0;
+			}
+			80% {
+				margin: -20px 0 0 0;
+			}
+			100% {
+				margin: 0 0 0 0;
+			}
+		}
+	.preloader-icon-shadow {
+		font-size: 2.1em;
+		color: #bbbbbb;
+		text-shadow: 0 0 5px #bbbbbb;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(65%, -30%) rotateY(45deg) rotateX(-70deg) scale(1.7);
+		animation: preloader-icon-shadow-jump 5.3s infinite 0.3s;
+	}
+		@keyframes preloader-icon-shadow-jump {
+			0% {
+				transform: translate(65%, -30%) rotateY(45deg) rotateX(-70deg) scale(1.7);
+				color: #bbbbbb;
+				text-shadow: 0 0 5px #bbbbbb;
+			}
+			16% {
+				transform: translate(245%, -65%) rotateY(45deg) rotateX(-70deg) scale(2.3);
+				color: #dddddd;
+				text-shadow: -3px -3px 15px #dddddd;
+			}
+			32% {
+				transform: translate(65%, -30%) rotateY(45deg) rotateX(-70deg) scale(1.7);
+				color: #bbbbbb;
+				text-shadow: 0 0 5px #bbbbbb;
+			}
+			48% {
+				transform: translate(245%, -65%) rotateY(45deg) rotateX(-70deg) scale(2.3);
+				color: #dddddd;
+				text-shadow: -3px -3px 15px #dddddd;
+			}
+			64% {
+				transform: translate(65%, -30%) rotateY(45deg) rotateX(-70deg) scale(1.7);
+				color: #bbbbbb;
+				text-shadow: 0 0 5px #bbbbbb;
+			}
+			80% {
+				transform: translate(245%, -65%) rotateY(45deg) rotateX(-70deg) scale(2.3);
+				color: #dddddd;
+				text-shadow: -3px -3px 15px #dddddd;
+			}
+			100% {
+				transform: translate(65%, -30%) rotateY(45deg) rotateX(-70deg) scale(1.7);
+				color: #bbbbbb;
+				text-shadow: 0 0 5px #bbbbbb;
+			}
+		}
+	.preloader-text {
+		font-size: 0.33em;
+		color: #ff0000;
+		text-shadow: 1px 1px 1px #aaaaaa;
+		position: absolute;
+		bottom: -95px;
+		right: 75px;
+	}
