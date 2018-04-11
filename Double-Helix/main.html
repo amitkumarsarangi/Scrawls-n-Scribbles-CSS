@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Double Helix</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<section id='about'>Double Helix DNA like structure</section>
+
+	<main id='doubleHelix'></main>
+
+	<script type="text/javascript">
+		window.onload = function() {
+			var about = document.getElementById('about');
+			var doubleHelix = document.getElementById('doubleHelix');
+			var temp = "";
+
+			for(var i=0; i<25; i++) {temp += "<div></div>";}
+			doubleHelix.innerHTML = temp;
+
+			about.onclick = function() {about.style.display = 'none';}
+
+			doubleHelix.onclick = function() {about.style.display = 'block';}
+		}
+	</script>
+</body>
+</html>
