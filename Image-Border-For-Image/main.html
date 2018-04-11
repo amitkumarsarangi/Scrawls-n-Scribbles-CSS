@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Border for Image</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div class="image-border"></div>
+
+	<script type="text/javascript">
+		window.onload = function() {
+			var elem = document.getElementsByClassName('image-border');
+			elem[0].onclick = function() {
+				elem[0].classList.toggle("change-img");
+			}
+		}
+	</script>
+</body>
+</html>
