@@ -1,0 +1,222 @@
+body {
+    margin: 0px 0px 0px 0px;
+}
+
+h1 a {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 100;
+    color: orangered;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+}
+
+footer a {
+    color: orangered;
+    text-decoration: none;
+}
+/* Tag selectors above this line please */
+
+.float-clear {
+    clear: both;
+}
+
+.search-box-text {
+    float: left;
+    width: 202px;
+    border: 2px solid darkseagreen;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 17px;
+    color: darkseagreen;
+    background: white url(search-logo.png) right center no-repeat;
+}
+
+.submit-button {
+    float: right;
+    border: 2px solid orangered;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: whitesmoke;
+    background: orangered;
+}
+
+.create-space {
+    width: 10px;
+    height: 300px;
+    /*border: 1px solid red;*/
+    float: right;
+}
+/* Class selectors above this line please */
+/* ID selectors below this line please */
+#topMostBar {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 1010px;
+    height: 55px;
+    background: linear-gradient(darkseagreen, white);
+    background: -webkit-linear-gradient(darkseagreen, white);
+    background: -o-linear-gradient(darkseagreen, white);
+    background: -moz-linear-gradient(darkseagreen, white);
+    background: -ms-linear-gradient(darkseagreen, white);
+}
+
+#dateTime {
+    float: right;
+    color: dimgrey;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0px 15px 0px 0px;
+    transition: font-size 0.5s linear;
+    -webkit-transition: font-size 0.5s linear;
+    -moz-transition: font-size 0.5s linear;
+    -o-transition: font-size 0.5s linear;
+    -ms-transition: font-size 0.5s linear;
+    cursor: pointer;
+}
+
+#dateTime:hover {
+    color: orangered;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#container {
+    margin: 0 auto;
+    width: 1010px;
+    height: 222px;
+    background: linear-gradient(white, darkseagreen);
+    background: -webkit-linear-gradient(white, darkseagreen);
+    background: -o-linear-gradient(white, darkseagreen);
+    background: -moz-linear-gradient(white, darkseagreen);
+    background: -ms-linear-gradient(white, darkseagreen);
+}
+
+#brand {
+    float: left;
+    padding: 10px 20px 10px 30px;
+}
+
+#searchBox {
+    float: right;
+    width: 400px;
+    height: 100px;
+    margin: 50px 0px 0px 0px;
+    padding: 50px 30px 0px 0px;
+}
+
+#navBar {
+    margin:0 auto;
+    width: 1010px;
+    height: 80px;
+    padding: 20px 0px 30px 0px;
+    background: linear-gradient(darkseagreen, white);
+    background: -webkit-linear-gradient(darkseagreen, white);
+    background: -moz-linear-gradient(darkseagreen, white);
+    background: -o-linear-gradient(darkseagreen, white);
+    background: -ms-linear-gradient(darkseagreen, white);
+}
+
+#navBar ul {
+    list-style: none;
+}
+
+#navBar ul li {
+    float: left;
+    height: 30px;
+    padding: 0px 20px;
+    border-right: 2px solid darkseagreen;
+}
+
+#navBar ul li:last-child {
+    border-right: none;
+}
+
+#navBar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: white;
+    line-height: 20px;
+    transition: font-size 0.25s ease;
+    -webkit-transition: font-size 0.25s ease;
+    -moz-transition: font-size 0.25s ease;
+    -o-transition: font-size 0.25s ease;
+    -ms-transition: font-size 0.25s ease;
+}
+
+#navBar ul li a:hover, #navBar ul li a.all-big {
+    font-size: 30px;
+    font-weight: bold;
+    color: orangered;
+}
+
+#contentBar {
+    margin: 0 auto;
+    width: 1010px;
+}
+
+#vidBar {
+    margin: 0 auto;
+    width: 505px;
+    padding: 30px 0 0 0;
+    float: right;
+}
+
+#intro {
+    margin: 0 auto;
+    width: 1010px;
+    padding: 5px 0px 10px 0px;
+    background: white;
+}
+
+#intro h1 {
+    text-align: left;
+    font-size: 26px;
+    /*padding: 0px 40px 0px 40px;*/
+    color: orangered;
+    font-weight: normal;
+}
+
+#intro h2 {
+    text-align: left;
+    font-size: 22px;
+    /*padding: 0px 40px 0px 40px;*/
+    color: darkseagreen;
+}
+
+#intro p {
+    font-size: 20px;
+    color: darkseagreen;
+    /*padding: 0px 40px 0px 40px;*/
+    text-align: justify;
+}
+
+#intro a {
+    text-decoration: none;
+    color: orangered;
+}
+
+#footer {
+    margin: 0 auto;
+    width: 1010px;
+    height: 50px;
+    padding: 60px 0px 0px 0px;
+    color: orangered;
+    font-size: 17px;
+    text-align: center;
+    background: linear-gradient(white, darkseagreen);
+    background: -webkit-linear-gradient(white, darkseagreen);
+    background: -moz-linear-gradient(white, darkseagreen);
+    background: -o-linear-gradient(white, darkseagreen);
+    background: -ms-linear-gradient(white, darkseagreen);
+}
