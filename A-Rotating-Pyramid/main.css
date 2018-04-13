@@ -1,0 +1,78 @@
+* {margin: 0; border: 0; padding: 0;}
+body {
+	background-color: transparent;
+}
+
+.main-container {
+	margin: 0 auto;
+	margin-top: 150px;
+	width: 400px;
+	height: 400px;
+	position: relative;
+}
+	.pyramid-container {
+		margin: 50px;
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+		-webkit-animation: rotatePyramid 20s linear infinite;
+				animation: rotatePyramid 20s linear infinite;
+	}
+		@keyframes rotatePyramid {
+			0% {
+				-webkit-transform: rotateX(0deg) rotateY(0deg);
+						transform: rotateX(0deg) rotateY(0deg);
+			}
+			33% {
+				-webkit-transform: rotateX(-360deg) rotateY(-360deg);
+						transform: rotateX(-360deg) rotateY(-360deg);
+			}
+			66% {
+				-webkit-transform: rotateX(0deg) rotateY(0deg);
+						transform: rotateX(0deg) rotateY(0deg);
+			}
+			100% {
+				-webkit-transform: rotateX(360deg) rotateY(360deg);
+						transform: rotateX(360deg) rotateY(360deg);
+			}
+		}
+		.pyramid-side-one, .pyramid-side-two, .pyramid-side-three, .pyramid-side-four, .pyramid-base {
+			width: 0;
+			height: 0;
+			opacity: 0.5;
+			position: absolute;
+			-webkit-transform-style: preserve-3d;
+					transform-style: preserve-3d;
+		}
+		.pyramid-side-one {
+			border-bottom: 300px solid lightblue;
+			border-right: 150px solid transparent;
+			border-left: 150px solid transparent;
+			transform: rotateX(30deg) translateZ(87px);
+		}
+		.pyramid-side-two {
+			border-bottom: 300px solid lightgreen;
+			border-right: 150px solid transparent;
+			border-left: 150px solid transparent;
+			transform: rotateX(-30deg) translateZ(-87px);
+		}
+		.pyramid-side-three {
+			border-bottom: 300px solid coral;
+			border-right: 150px solid transparent;
+			border-left: 150px solid transparent;
+			transform: rotateY(90deg) rotateX(30deg) translateZ(87px);
+		}
+		.pyramid-side-four {
+			border-bottom: 300px solid crimson;
+			border-right: 150px solid transparent;
+			border-left: 150px solid transparent;
+			transform: rotateY(90deg) rotateX(-30deg) translateZ(-87px);
+		}
+		.pyramid-base {
+			width: 100%;
+			height: 100%;
+			background-color: brown;
+			transform: rotateX(90deg) translateZ(-87px);
+		}
