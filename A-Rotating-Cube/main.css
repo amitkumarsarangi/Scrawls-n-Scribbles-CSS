@@ -1,0 +1,78 @@
+* {margin: 0; padding: 0; border: 0;}
+body {
+	background-color: transparent;
+}
+
+.cube-container {
+	margin: 0 auto;
+	margin-top: 150px;
+	width: 400px;
+	height: 400px;
+	position: relative;
+}
+	.cube {
+		margin: 50px;
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+		-webkit-animation: rotateCube 20s linear infinite;
+				animation: rotateCube 20s linear infinite;
+	}
+		@keyframes rotateCube {
+			0% {
+				-webkit-transform: rotateX(0deg) rotateY(0deg);
+						transform: rotateX(0deg) rotateY(0deg);
+			}
+			33% {
+				-webkit-transform: rotateX(-360deg) rotateY(-360deg);
+						transform: rotateX(-360deg) rotateY(-360deg);
+			}
+			66% {
+				-webkit-transform: rotateX(0deg) rotateY(0deg);
+						transform: rotateX(0deg) rotateY(0deg);
+			}
+			100% {
+				-webkit-transform: rotateX(360deg) rotateY(360deg);
+						transform: rotateX(360deg) rotateY(360deg);
+			}
+		}
+		.cube-front, .cube-back, .cube-top, .cube-bottom, .cube-left, .cube-right {
+			width: 100%;
+			height: 100%;
+			opacity: 0.5;
+			position: absolute;
+			-webkit-transform-style: preserve-3d;
+					transform-style: preserve-3d;
+		}
+		.cube-front {
+			background-color: steelblue;
+			-webkit-transform: translateZ(175px);
+            		transform: translateZ(175px);
+		}
+		.cube-back {
+			background-color: saddlebrown;
+			-webkit-transform: translateZ(-175px);
+            		transform: translateZ(-175px);
+		}
+		.cube-top {
+			background-color: gold;
+			-webkit-transform: rotateX(90deg) translateZ(175px);
+            		transform: rotateX(90deg) translateZ(175px);
+		}
+		.cube-bottom {
+			background-color: orangered;
+			-webkit-transform: rotateX(90deg) translateZ(-175px);
+            		transform: rotateX(90deg) translateZ(-175px);
+		}
+		.cube-left {
+			background-color: darkolivegreen;
+			-webkit-transform: rotateY(90deg) translateZ(-175px);
+            		transform: rotateY(90deg) translateZ(-175px);
+		}
+		.cube-right {
+			background-color: firebrick;
+			-webkit-transform: rotateY(90deg) translateZ(175px);
+            		transform: rotateY(90deg) translateZ(175px);
+		}
