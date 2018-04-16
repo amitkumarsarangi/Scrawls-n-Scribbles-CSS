@@ -1,0 +1,20 @@
+* {margin: 0; padding: 0; border: 0;}
+body {
+	background-color: transparent;
+}
+.night-vision {
+	margin: 0 auto;
+	margin-top: 10vh;
+	width: 75vw;
+	height: 42vw;
+	background-image: url("img101.jpg"), repeating-linear-gradient(rgba(0, 0, 0, 0.4) 3px, transparent 9px), radial-gradient(#11FF11, #000000);
+	background-blend-mode: overlay;
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 7px 2px #000000;
+	cursor: pointer;
+}
+.normal-vision {
+	background-image: url("img101.jpg");
+}
