@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Night Vision Slider</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div class='main-container'>
+		<div class='sub-container'></div>
+		<div class='slider'></div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".main-container").on("mousemove", function() {
+				var getWidth = Math.floor($(this).width());
+				var getLeftPosition = Math.floor($(this).offset().left);
+				var getMousePosition = event.clientX;
+				var getSliderPosition = Math.floor(((getMousePosition - getLeftPosition) * 100) / getWidth);
+				$(".slider").css("left", getSliderPosition+"%");
+				$(".sub-container").css("width", getSliderPosition+"%");
+			});
+		});
+	</script>
+</body>
+</html>
