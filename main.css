@@ -1,13 +1,23 @@
 body {
-	background-color: coral;
+	background-color: rgba(99, 119, 153, 0.9);
 	color: khaki;
-	font-size: 25px;
+	font-size: 21px;
 	text-align: center;
 	font-family: 'Berkshire Swash', cursive;
 	transition: all linear 0.5s;
 }
 h1 {
 	font-size: 1.5em;
+}
+main {
+	margin: auto;
+	width: 90%;
+}
+li:nth-child(odd) {
+	background-color: rgba(102, 105, 112, 0.7);
+}
+li:nth-child(even) {
+	background-color: rgba(121, 125, 135, 0.7);
 }
 a {
 	text-decoration: none;
