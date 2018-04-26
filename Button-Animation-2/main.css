@@ -1,0 +1,100 @@
+body {
+    background-color: transparent;
+    font-family: monospace;
+}
+.button-animation {
+    padding: 15px 30px;
+    background-color: crimson;
+    color: khaki;
+    text-shadow: 1px 0 0 khaki;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    .button-animation:hover ~ .pulse-bottom-left{
+        animation: pulse-effect-bottom-left 0.2s linear;
+    }
+    .button-animation:hover ~ .pulse-bottom-right{
+        animation: pulse-effect-bottom-right 0.2s linear;
+    }
+    .button-animation:hover ~ .pulse-top-left{
+        animation: pulse-effect-top-left 0.2s linear;
+    }
+    .button-animation:hover ~ .pulse-top-right{
+        animation: pulse-effect-top-right 0.2s linear;
+    }
+        @keyframes pulse-effect-bottom-left {
+            from {
+                transform: translate(-50%, 50%) scale(1.1);
+                opacity: 0.5;
+            }
+            to {
+                transform: translate(-50%, 50%) scale(5.1);
+                opacity: 0.1;
+            }
+        }
+        @keyframes pulse-effect-bottom-right {
+            from {
+                transform: translate(50%, 50%) scale(1.1);
+                opacity: 0.5;
+            }
+            to {
+                transform: translate(50%, 50%) scale(5.1);
+                opacity: 0.1;
+            }
+        }
+        @keyframes pulse-effect-top-left {
+            from {
+                transform: translate(-50%, -50%) scale(1.1);
+                opacity: 0.5;
+            }
+            to {
+                transform: translate(-50%, -50%) scale(5.1);
+                opacity: 0.1;
+            }
+        }
+        @keyframes pulse-effect-top-right {
+            from {
+                transform: translate(50%, -50%) scale(1.1);
+                opacity: 0.5;
+            }
+            to {
+                transform: translate(50%, -50%) scale(5.1);
+                opacity: 0.1;
+            }
+        }
+.pulse-bottom-left, .pulse-bottom-right, .pulse-top-left, .pulse-top-right {
+    width: 100px;
+    height: 100px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    position: fixed;
+    opacity: 0;
+    z-index: -100;
+}
+    .pulse-bottom-left {
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, 50%);
+    }
+    .pulse-bottom-right {
+        bottom: 0;
+        right: 0;
+        transform: translate(50%, 50%);
+    }
+    .pulse-top-left {
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+    .pulse-top-right {
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+    }
