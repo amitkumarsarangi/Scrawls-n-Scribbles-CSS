@@ -1,0 +1,38 @@
+body {
+	background-color: whitesmoke;
+}
+
+.facebook-card {
+	background: #3b5998;
+	color: #ffffff;
+}
+.twitter-card {
+	background: #00aced;
+	color: #ffffff;
+}
+.google-card {
+	background: #dd4b39;
+	color: #ffffff;
+}
+
+.jumbotron {
+	transform-style: preserve-3d;
+	transition: 1s ease;
+}
+
+.card-front, .card-back {
+	backface-visibility: hidden;
+}
+
+.card-front {
+	font-size: 50px;
+}
+
+.card-back {
+	font-size: 30px;
+	transform: rotateY(180deg);
+}
+
+.card:hover {
+	transform: rotateY(180deg);
+}
