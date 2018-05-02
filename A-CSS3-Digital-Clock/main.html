@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Amit Kumar Sarangi">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>A CSS3 Digital Clock</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header>A CSS3 Digital Clock</header>
+	<main id="digitalClock">
+		<ul id="hoursDigits">
+			<li>00</li>...<li>23</li>
+		</ul>
+		<div class="colon">:</div>
+		<ul id="minutesDigits">
+			<li>00</li>...<li>59</li>
+		</ul>
+		<div class="colon">:</div>
+		<ul id="secondsDigits">
+			<li>00</li>...<li>59</li>
+		</ul>
+	</main>
+	<div id="toggler"></div>
+	<script type="text/javascript">
+		var hoursDigits = document.getElementById("hoursDigits");
+		var minutesDigits = document.getElementById("minutesDigits");
+		var secondsDigits = document.getElementById("secondsDigits");
+		var toggler = document.getElementById("toggler");
+		//all getElement variables above this line...
+		var currentTime = new Date(); //get the current date and time...
+		var hours = currentTime.getHours(); //get the hour...
+		var minutes = currentTime.getMinutes(); //get the minutes...
+		var seconds = currentTime.getSeconds(); //get the seconds...
+		//all global variables above this line...
+		window.onload = function() {
+			toggler.innerHTML = "show";
+			//Fill up innerHTML for #hoursDigits...
+			var hourHTML = "";
+			hoursDigits.innerHTML = hourHTML;
+			var hoursMirror = hours;
+			while(hours<=23) {
+				if (hours>=0&&hours<=9) {
+					hourHTML += "<li>"+"0"+hours+"</li>";
+				} else {
+					hourHTML += "<li>"+hours+"</li>";
+				}
+				hours++;
+			}
+			hours = 0;
+			while(hours<hoursMirror) {
+				if (hours>=0&&hours<=9) {
+					hourHTML += "<li>"+"0"+hours+"</li>";
+				} else {
+					hourHTML += "<li>"+hours+"</li>";
+				}
+				hours++;
+			}
+			hoursDigits.innerHTML = hourHTML;
+			//Fill up innerHTML for #minutesDigits...
+			var minuteHTML = "";
+			minutesDigits.innerHTML = minuteHTML;
+			var minutesMirror = minutes;
+			while(minutes<=59) {
+				if(minutes>=0&&minutes<=9) {
+					minuteHTML += "<li>"+"0"+minutes+"</li>";
+				} else {
+					minuteHTML += "<li>"+minutes+"</li>";
+				}
+				minutes++;
+			}
+			minutes = 0;
+			while(minutes<minutesMirror) {
+				if(minutes>=0&&minutes<=9) {
+					minuteHTML += "<li>"+"0"+minutes+"</li>";
+				} else {
+					minuteHTML += "<li>"+minutes+"</li>";
+				}
+				minutes++;
+			}
+			minutesDigits.innerHTML = minuteHTML;
+			//Fill up innerHTML for #secondsDigits...
+			var secondHTML = "";
+			secondsDigits.innerHTML = secondHTML;
+			var secondsMirror = seconds;
+			while(seconds<=59) {
+				if(seconds>=0&&seconds<=9) {
+					secondHTML += "<li>"+"0"+seconds+"</li>";
+				} else {
+					secondHTML += "<li>"+seconds+"</li>";
+				}
+				seconds++;
+			}
+			seconds = 0;
+			while(seconds<secondsMirror) {
+				if(seconds>=0&&seconds<=9) {
+					secondHTML += "<li>"+"0"+seconds+"</li>";
+				} else {
+					secondHTML += "<li>"+seconds+"</li>";
+				}
+				seconds++;
+			}
+			secondsDigits.innerHTML = secondHTML;
+		}
+		// toggler functionality...
+		toggler.onclick = function() {
+			if (toggler.innerHTML == "show") {
+				toggler.innerHTML = "hide";
+				document.getElementById("digitalClock").style.overflowY = "initial";
+			} else {
+				toggler.innerHTML = "show";
+				document.getElementById("digitalClock").style.overflowY = "hidden";
+			}
+		}
+	</script>
+</body>
+</html>

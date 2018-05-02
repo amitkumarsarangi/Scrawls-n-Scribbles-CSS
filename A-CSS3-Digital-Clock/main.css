@@ -1,0 +1,70 @@
+* {margin: 0; padding: 0; border: 0;}
+body {
+	color: #999999;
+	background-color: rgba(200, 200, 200, 0.9);
+	text-shadow: 1px 1px 1px #000000;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 4em;
+}
+header {
+	padding-top: 5vh;
+	padding-right: 5vw;
+	font-size: 5vw;
+	text-align: right;
+	background-color: rgba(200, 200, 200, 0.9);
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#digitalClock {
+	padding: 10px 2px 0 10px;
+	height: 1em;
+	position: absolute;
+	bottom: 40vh;
+	left: 10vw;
+	overflow-y: hidden;
+}
+	#digitalClock ul, .colon {
+		float: left;
+	}
+	#digitalClock li {
+		font-size: 1em;
+		letter-spacing: 4px;
+		text-align: center;
+	}
+	#hoursDigits li {
+		animation: changeDigits 86400s steps(24, end) 0s infinite;
+		-webkit-animation: changeDigits 86400s steps(24, end) 0s infinite;
+	}
+	#minutesDigits li {
+		animation: changeDigits 3600s steps(60, end) 0s infinite;
+		-webkit-animation: changeDigits 3600s steps(60, end) 0s infinite;
+	}
+	#secondsDigits li {
+		animation: changeDigits 60s steps(60, end) 0s infinite;
+		-webkit-animation: changeDigits 60s steps(60, end) 0s infinite;
+	}
+		@keyframes changeDigits {
+			to {
+				transform: translateY(-60em);
+			}
+		}
+		@-webkit-keyframes changeDigits {
+			to {
+				-webkit-transform: translateY(-60em);
+			}
+		}
+#toggler {
+	padding: 5px;
+	font-size: 30px;
+	border-radius: 4px;
+	box-shadow: 1px 1px 1px 1px #000000;
+	background-color: whitesmoke;
+	text-transform: uppercase;
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	cursor: pointer;
+}
